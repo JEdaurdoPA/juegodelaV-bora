@@ -32,6 +32,8 @@ def move():
         return
 
     snake.append(head)
+    food.x = randrange(-1, 1) * 10
+    food.y = randrange(-1, 1) * 10
 
     if head == food:
         print('Snake:', len(snake))
@@ -60,3 +62,4 @@ onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
 move()
 done()
+
